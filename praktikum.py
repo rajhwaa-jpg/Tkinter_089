@@ -122,3 +122,7 @@ hasil_label = tk.Label(
     bg="#17142f",
     justify="center"
 )
+hasil_label.place(relx=0.5, rely=0.5, anchor="center")
+
+
+root.mainloop()
