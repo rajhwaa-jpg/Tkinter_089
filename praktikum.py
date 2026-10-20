@@ -102,3 +102,14 @@ def prediksi():
             "Masukkan semua nilai terlebih dahulu!"
         )
 
+tombol = tk.Button(
+    frame_kiri,
+    text="Hasil Prediksi",
+    command=prediksi,
+    bg="#29254d",
+    fg="white",
+    font=("Arial", 10, "bold"),
+    padx=15,
+    pady=5
+)
+tombol.grid(row=11, column=1, pady=20)
