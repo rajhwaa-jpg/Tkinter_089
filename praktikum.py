@@ -15,3 +15,15 @@ judul = tk.Label(
 )
 judul.pack(pady=20)
 
+frame_kiri = tk.Frame(root, bg="#0d0b24")
+frame_kiri.pack(side="left", padx=50)
+
+frame_kanan = tk.Frame(
+    root,
+    bg="#17142f",
+    width=350,
+    height=350
+)
+frame_kanan.pack(side="right", padx=40)
+frame_kanan.pack_propagate(False)
+
