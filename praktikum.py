@@ -27,3 +27,25 @@ frame_kanan = tk.Frame(
 frame_kanan.pack(side="right", padx=40)
 frame_kanan.pack_propagate(False)
 
+entries = []
+
+for i in range(10):
+    label = tk.Label(
+        frame_kiri,
+        text=f"Nilai Mata Pelajaran {i+1}",
+        fg="white",
+        bg="#0d0b24",
+        font=("Arial", 10)
+    )
+    label.grid(row=i, column=0, pady=5, sticky="w")
+
+    entry = tk.Entry(
+        frame_kiri,
+        width=10,
+        bg="#211e3d",
+        fg="white",
+        insertbackground="white"
+    )
+    entry.grid(row=i, column=1, padx=15)
+
+    entries.append(entry)
