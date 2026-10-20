@@ -70,3 +70,35 @@ jurusan = ttk.Combobox(
 )
 jurusan.grid(row=10, column=1)
 jurusan.set("Teknologi Informasi")
+
+def prediksi():
+    try:
+        nilai = [float(entry.get()) for entry in entries]
+
+        if any(n < 0 or n > 100 for n in nilai):
+            messagebox.showerror(
+                "Error",
+                "Nilai harus berada antara 0 sampai 100!"
+            )
+            return
+
+        rata_rata = sum(nilai) / len(nilai)
+
+        if rata_rata >= 75:
+            hasil = "Teknologi Informasi"
+        elif rata_rata >= 65:
+            hasil = "Sistem Informasi"
+        else:
+            hasil = "Informatika"
+
+        hasil_label.config(
+            text=f"Prediksi Prodi:\n{hasil}\n\n"
+                 f"Rata-rata Nilai: {rata_rata:.2f}"
+        )
+
+    except ValueError:
+        messagebox.showerror(
+            "Error",
+            "Masukkan semua nilai terlebih dahulu!"
+        )
+
